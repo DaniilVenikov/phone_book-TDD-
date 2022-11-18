@@ -3,6 +3,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import java.util.stream.Stream;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -11,6 +13,7 @@ import static org.hamcrest.Matchers.*;
 public class PhoneBookTest {
 
     static PhoneBook phoneBook;
+    private ByteArrayOutputStream output = new ByteArrayOutputStream();
 
     private static long suiteStartTime;
     private long testStartTime;
@@ -30,6 +33,7 @@ public class PhoneBookTest {
     public void init(){
         System.out.println("test started");
         testStartTime = System.nanoTime();
+        System.setOut(new PrintStream(output));
     }
 
     @AfterEach
@@ -66,13 +70,14 @@ public class PhoneBookTest {
     static Stream<Arguments> sourceForFindByNumberTest(){
         return Stream.of(Arguments.of("89193459290", "Kolya"),
                 Arguments.of("88005553535", "Nika"),
-                Arguments.of("89003873198", "Mag"));
+                Arguments.of("89003873198", "Mag"),
+                Arguments.of("89193459090", null));
     }
 
 
     @ParameterizedTest
     @MethodSource("sourceForFindByNameTest")
-    void findByName(String name, String expected){
+    void findByNameTest(String name, String expected){
         assertThat(phoneBook.findByName(name), is(equalTo(expected)));
     }
     static Stream<Arguments> sourceForFindByNameTest(){
@@ -82,4 +87,15 @@ public class PhoneBookTest {
                 Arguments.of("Sema", null));
     }
 
+    @Test
+    void printAllNamesTest(){
+        phoneBook.printAllNames();
+        Assertions.assertEquals("Kolya" + '\n'
+                + "Mag" + '\n'
+                + "Nika" + '\n'
+                + "Petr" + '\n'
+                + "Sasha" + '\n'
+                + "Vasya" + '\n'
+                , output.toString());
+    }
 }

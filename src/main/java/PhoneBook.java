@@ -26,4 +26,8 @@ public class PhoneBook {
     public String findByName(String name){
         return phoneBook.getOrDefault(name, null);
     }
+
+    public void printAllNames(){
+
+    }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="PhoneBookTest" time="0.109" tests="11" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="PhoneBookTest" time="0.145" tests="13" errors="0" skipped="0" failures="1">
   <properties>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
     <property name="java.specification.version" value="12"/>
@@ -13,7 +13,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-12.0.2.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/daniil/IdeaProjects/phone_book_TDD/target/surefire/surefirebooter16075463919223809138.jar /Users/daniil/IdeaProjects/phone_book_TDD/target/surefire 2022-11-18T21-06-54_704-jvmRun1 surefire12897458430788163261tmp surefire_01256945137812319215tmp"/>
+    <property name="sun.java.command" value="/Users/daniil/IdeaProjects/phone_book_TDD/target/surefire/surefirebooter16575960322510567348.jar /Users/daniil/IdeaProjects/phone_book_TDD/target/surefire 2022-11-18T23-07-46_150-jvmRun1 surefire16494486914858221374tmp surefire_07522382357212977586tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/daniil/IdeaProjects/phone_book_TDD/target/test-classes:/Users/daniil/IdeaProjects/phone_book_TDD/target/classes:/Users/daniil/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.0/junit-jupiter-5.9.0.jar:/Users/daniil/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.0/junit-jupiter-api-5.9.0.jar:/Users/daniil/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/daniil/.m2/repository/org/junit/platform/junit-platform-commons/1.9.0/junit-platform-commons-1.9.0.jar:/Users/daniil/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/daniil/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.0/junit-jupiter-params-5.9.0.jar:/Users/daniil/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.0/junit-jupiter-engine-5.9.0.jar:/Users/daniil/.m2/repository/org/junit/platform/junit-platform-engine/1.9.0/junit-platform-engine-1.9.0.jar:/Users/daniil/.m2/repository/org/hamcrest/hamcrest-all/1.3/hamcrest-all-1.3.jar:"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/daniil/IdeaProjects/phone_book_TDD/target/surefire/surefirebooter16075463919223809138.jar"/>
+    <property name="surefire.real.class.path" value="/Users/daniil/IdeaProjects/phone_book_TDD/target/surefire/surefirebooter16575960322510567348.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="12.0.2+10"/>
@@ -56,71 +56,32 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="56.0"/>
   </properties>
-  <testcase name="findByNumberTest(String, String)[1]" classname="PhoneBookTest" time="0.031">
+  <testcase name="findByNumberTest(String, String)[1]" classname="PhoneBookTest" time="0.037">
     <system-out><![CDATA[tests started
 test started
-test completed
-time test: 19573944
 ]]></system-out>
   </testcase>
-  <testcase name="findByNumberTest(String, String)[2]" classname="PhoneBookTest" time="0.002">
-    <system-out><![CDATA[test started
-test completed
-time test: 375314
-]]></system-out>
-  </testcase>
-  <testcase name="findByNumberTest(String, String)[3]" classname="PhoneBookTest" time="0.001">
-    <system-out><![CDATA[test started
-test completed
-time test: 348406
-]]></system-out>
-  </testcase>
-  <testcase name="addTest(String, String, int)[1]" classname="PhoneBookTest" time="0.001">
-    <system-out><![CDATA[test started
-test completed
-time test: 393708
-]]></system-out>
-  </testcase>
-  <testcase name="addTest(String, String, int)[2]" classname="PhoneBookTest" time="0.001">
-    <system-out><![CDATA[test started
-test completed
-time test: 370555
-]]></system-out>
-  </testcase>
-  <testcase name="addTest(String, String, int)[3]" classname="PhoneBookTest" time="0.001">
-    <system-out><![CDATA[test started
-test completed
-time test: 346746
-]]></system-out>
-  </testcase>
-  <testcase name="addTest(String, String, int)[4]" classname="PhoneBookTest" time="0.001">
-    <system-out><![CDATA[test started
-test completed
-time test: 355681
-]]></system-out>
-  </testcase>
-  <testcase name="findByName(String, String)[1]" classname="PhoneBookTest" time="0.001">
-    <system-out><![CDATA[test started
-test completed
-time test: 269276
-]]></system-out>
-  </testcase>
-  <testcase name="findByName(String, String)[2]" classname="PhoneBookTest" time="0.001">
-    <system-out><![CDATA[test started
-test completed
-time test: 249761
-]]></system-out>
-  </testcase>
-  <testcase name="findByName(String, String)[3]" classname="PhoneBookTest" time="0.001">
-    <system-out><![CDATA[test started
-test completed
-time test: 271494
-]]></system-out>
-  </testcase>
-  <testcase name="findByName(String, String)[4]" classname="PhoneBookTest" time="0.001">
-    <system-out><![CDATA[test started
-test completed
-time test: 243061
-]]></system-out>
+  <testcase name="findByNumberTest(String, String)[2]" classname="PhoneBookTest" time="0.002"/>
+  <testcase name="findByNumberTest(String, String)[3]" classname="PhoneBookTest" time="0.003"/>
+  <testcase name="findByNumberTest(String, String)[4]" classname="PhoneBookTest" time="0.002"/>
+  <testcase name="addTest(String, String, int)[1]" classname="PhoneBookTest" time="0.002"/>
+  <testcase name="addTest(String, String, int)[2]" classname="PhoneBookTest" time="0.001"/>
+  <testcase name="addTest(String, String, int)[3]" classname="PhoneBookTest" time="0.001"/>
+  <testcase name="addTest(String, String, int)[4]" classname="PhoneBookTest" time="0.001"/>
+  <testcase name="findByNameTest(String, String)[1]" classname="PhoneBookTest" time="0.002"/>
+  <testcase name="findByNameTest(String, String)[2]" classname="PhoneBookTest" time="0.002"/>
+  <testcase name="findByNameTest(String, String)[3]" classname="PhoneBookTest" time="0.001"/>
+  <testcase name="findByNameTest(String, String)[4]" classname="PhoneBookTest" time="0.001"/>
+  <testcase name="printAllNamesTest" classname="PhoneBookTest" time="0.009">
+    <failure type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+expected: <Kolya
+Mag
+Nika
+Petr
+Sasha
+Vasya
+> but was: <>
+	at PhoneBookTest.printAllNamesTest(PhoneBookTest.java:93)
+]]></failure>
   </testcase>
 </testsuite>
