@@ -22,4 +22,8 @@ public class PhoneBook {
                 .findFirst();
         return optional.orElse(null);
     }
+
+    public String findByName(String name){
+        return null;
+    }
 }
