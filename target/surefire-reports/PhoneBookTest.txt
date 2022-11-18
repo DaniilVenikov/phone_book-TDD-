@@ -1,15 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: PhoneBookTest
 -------------------------------------------------------------------------------
-Tests run: 13, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.145 s <<< FAILURE! - in PhoneBookTest
-PhoneBookTest.printAllNamesTest  Time elapsed: 0.009 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: 
-expected: <Kolya
-Mag
-Nika
-Petr
-Sasha
-Vasya
-> but was: <>
-	at PhoneBookTest.printAllNamesTest(PhoneBookTest.java:93)
-
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.125 s - in PhoneBookTest

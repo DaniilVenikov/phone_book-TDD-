@@ -28,6 +28,9 @@ public class PhoneBook {
     }
 
     public void printAllNames(){
-
+        phoneBook.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByKey())
+                .forEach(e -> System.out.println(e.getKey()));
     }
 }
