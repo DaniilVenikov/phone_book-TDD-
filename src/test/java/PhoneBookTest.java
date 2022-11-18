@@ -46,10 +46,23 @@ public class PhoneBookTest {
     void addTest(String name, String phoneNumber, int expected){
         assertThat(phoneBook.add(name, phoneNumber), is(equalTo(expected)));
     }
-
     static Stream<Arguments> sourceForAddTest(){
         return Stream.of(Arguments.of("Sasha", "89203297536", 1),
                 Arguments.of("Vasya","89193459090", 2),
-                Arguments.of("Sasha", "89191237956", 2));
+                Arguments.of("Sasha", "89191237956", 2),
+                Arguments.of("Petr", "89003876198", 3));
     }
+
+
+    @ParameterizedTest
+    @MethodSource("sourceForFindByNumberTest")
+    void findByNumberTest(String number, String expected){
+        assertThat(phoneBook.findByNumber(number), is(equalTo(expected)));
+    }
+    static Stream<Arguments> sourceForFindByNumberTest(){
+        return Stream.of(Arguments.of("89193459090", "Vasya"),
+                Arguments.of("89191237956", "Sasha"),
+                Arguments.of("89003876198", "Petr"));
+    }
+
 }
