@@ -1,6 +1,16 @@
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+
 public class PhoneBook {
+    private Map<String, String> phoneBook;
+
+    public PhoneBook(){
+        phoneBook = new HashMap<>();
+    }
 
     public int add(String name, String phoneNumber){
-        return 1;
+        phoneBook.put(name, phoneNumber);
+        return phoneBook.size();
     }
 }

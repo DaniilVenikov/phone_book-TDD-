@@ -10,7 +10,7 @@ import static org.hamcrest.Matchers.*;
 
 public class PhoneBookTest {
 
-    PhoneBook phoneBook = new PhoneBook();
+    static PhoneBook phoneBook;
 
     private static long suiteStartTime;
     private long testStartTime;
@@ -19,6 +19,7 @@ public class PhoneBookTest {
     public static void started(){
         System.out.println("tests started");
         suiteStartTime = System.nanoTime();
+        phoneBook = new PhoneBook();
     }
 
     @BeforeEach
