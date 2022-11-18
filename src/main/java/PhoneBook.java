@@ -1,6 +1,6 @@
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
+import java.util.Optional;
 
 public class PhoneBook {
     private Map<String, String> phoneBook;
@@ -15,6 +15,11 @@ public class PhoneBook {
     }
 
     public String findByNumber(String number){
-        return null;
+        Optional<String> optional = phoneBook.entrySet()
+                .stream()
+                .filter(entry -> number.equals(entry.getValue()))
+                .map(Map.Entry :: getKey)
+                .findFirst();
+        return optional.orElse(null);
     }
 }

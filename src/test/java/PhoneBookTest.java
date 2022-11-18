@@ -20,6 +20,10 @@ public class PhoneBookTest {
         System.out.println("tests started");
         suiteStartTime = System.nanoTime();
         phoneBook = new PhoneBook();
+        phoneBook.add("Kolya","89193459290");
+        phoneBook.add("Nika", "88005553535");
+        phoneBook.add("Mag", "89003873198");
+
     }
 
     @BeforeEach
@@ -47,10 +51,10 @@ public class PhoneBookTest {
         assertThat(phoneBook.add(name, phoneNumber), is(equalTo(expected)));
     }
     static Stream<Arguments> sourceForAddTest(){
-        return Stream.of(Arguments.of("Sasha", "89203297536", 1),
-                Arguments.of("Vasya","89193459090", 2),
-                Arguments.of("Sasha", "89191237956", 2),
-                Arguments.of("Petr", "89003876198", 3));
+        return Stream.of(Arguments.of("Sasha", "89203297536", 4),
+                Arguments.of("Vasya","89193459090", 5),
+                Arguments.of("Sasha", "89191237956", 5),
+                Arguments.of("Petr", "89003876198", 6));
     }
 
 
@@ -60,9 +64,9 @@ public class PhoneBookTest {
         assertThat(phoneBook.findByNumber(number), is(equalTo(expected)));
     }
     static Stream<Arguments> sourceForFindByNumberTest(){
-        return Stream.of(Arguments.of("89193459090", "Vasya"),
-                Arguments.of("89191237956", "Sasha"),
-                Arguments.of("89003876198", "Petr"));
+        return Stream.of(Arguments.of("89193459290", "Kolya"),
+                Arguments.of("88005553535", "Nika"),
+                Arguments.of("89003873198", "Mag"));
     }
 
 }
