@@ -69,7 +69,7 @@ public class PhoneBookTest {
                 Arguments.of("89003873198", "Mag"));
     }
 
-    
+
     @ParameterizedTest
     @MethodSource("sourceForFindByNameTest")
     void findByName(String name, String expected){
@@ -78,7 +78,8 @@ public class PhoneBookTest {
     static Stream<Arguments> sourceForFindByNameTest(){
         return Stream.of(Arguments.of("Kolya", "89193459290"),
                 Arguments.of("Nika", "88005553535"),
-                Arguments.of("Mag", "89003873198"));
+                Arguments.of("Mag", "89003873198"),
+                Arguments.of("Sema", null));
     }
 
 }
